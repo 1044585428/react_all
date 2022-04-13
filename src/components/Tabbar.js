@@ -5,7 +5,7 @@ export default function Tabbar() {
 		<div className={style.tabbar}>
 			<ul>
 				{/* Link 组件，不方便添加样式 */}
-				<li>
+				{/* <li>
 					<Link to="/film">film</Link>
 				</li>
 				<li>
@@ -13,8 +13,24 @@ export default function Tabbar() {
 				</li>
 				<li>
 					<Link to="/center">center</Link>
-				</li>
+				</li> */}
 				{/* Link 组件，不方便添加样式 */}
+				<li>
+					<NavLink
+						to="/antd"
+						className={({ isActive }) => (isActive ? style.active : "")}
+					>
+						antd
+					</NavLink>
+				</li>
+				<li>
+					<NavLink
+						to="/immutable"
+						className={({ isActive }) => (isActive ? style.active : "")}
+					>
+						immutable
+					</NavLink>
+				</li>
 				<li>
 					<NavLink
 						to="/film"

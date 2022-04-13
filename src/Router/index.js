@@ -29,6 +29,28 @@ export default function MRouter() {
 			path: "/detail/:id",
 			element: LazyLoad("Film/Detail_params/"),
 		},
+		{
+			path: "antd",
+			element: LazyLoad("antd/01-antdyr.js"),
+		},
+		{
+			path: "/immutable/",
+			element: LazyLoad("immutable"),
+			children: [
+				{
+					path: "mix",
+					element: LazyLoad("immutable/mix"),
+				},
+				{
+					path: "",
+					element: <Redirect to="/immutable/mix" />,
+				},
+			],
+		},
+		{
+			path: "/",
+			element: <Redirect to="/immutable" />,
+		},
 	]);
 }
 //路由拦截组件的封装
